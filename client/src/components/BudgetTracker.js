@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { TextField, Button, Box, Typography } from '@mui/material';
 import axios from 'axios';
 
-function BudgetTracker() {
+function BudgetTracker({ setBudgetTitle }) {
   const [budget, setBudget] = useState({ total: 500, spent: 0 });
   const [newBudget, setNewBudget] = useState('');
 
@@ -19,7 +19,7 @@ function BudgetTracker() {
 
   return (
     <Box my={2}>
-      <Typography variant="h6">Budget Tracker</Typography>
+      <Typography variant="h6">{setBudgetTitle}</Typography>
       <Typography>Total Budget: R{budget.total}</Typography>
       <Typography>Spent: R{budget.spent}</Typography>
       <Box display="flex" mt={1}>

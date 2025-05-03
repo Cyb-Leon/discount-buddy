@@ -2,7 +2,8 @@ import React, { useState } from 'react';
 import { TextField, Button, Box, Card, CardContent, Typography } from '@mui/material';
 import axios from 'axios';
 
-function ChatInterface({ setDeals, deals }) {
+
+function ChatInterface({ setDeals, deals, setLabel }) {
   const [query, setQuery] = useState('');
 
   const handleSubmit = async () => {
@@ -20,7 +21,7 @@ function ChatInterface({ setDeals, deals }) {
       <Box display="flex" mb={2}>
         <TextField
           fullWidth
-          label="Ask for deals (e.g., grocery deals under R200)"
+          label= {setLabel}//"Ask for deals (e.g., grocery deals under R200)"
           value={query}
           onChange={(e) => setQuery(e.target.value)}
         />

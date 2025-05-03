@@ -14,7 +14,7 @@ app.post("/api/deals", (req, res) => {
   const query = req.body.query; // e.g., "grocery deals under R200 in Johannesburg"
   const keywords = query.toLowerCase().split(" ");
   const budget = parseInt(keywords.find((word) => word.match(/\d+/)) || 1000);
-  console.log(budget);
+  console.log(keywords);
   const category = keywords.includes("grocery")
     ? "groceries"
     : "school supplies";

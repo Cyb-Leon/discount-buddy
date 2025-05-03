@@ -4,7 +4,7 @@ import ChatInterface from "./components/ChatInterface";
 import BudgetTracker from "./components/BudgetTracker";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import { useTranslation } from "react-i18next";
-import "./i18n";
+import i18nLang from "./i18n";
 import { Select, MenuItem } from "@mui/material";
 
 const theme = createTheme({
@@ -16,11 +16,10 @@ const theme = createTheme({
 function App() {
   const [deals, setDeals] = useState([]);
   const { t } = useTranslation();
-
   const [language, setLanguage] = useState("en");
   const handleLanguageChange = (e) => {
     setLanguage(e.target.value);
-    i18n.changeLanguage(e.target.value);
+    i18nLang.changeLanguage(e.target.value);
   };
 
   return (
@@ -30,8 +29,8 @@ function App() {
           <Typography variant="h4" align="center" gutterBottom>
             {t("title")}
           </Typography>
-          <ChatInterface setDeals={setDeals} deals={deals} />
-          <BudgetTracker />
+          <ChatInterface setDeals={setDeals} deals={deals} setLabel={t("searchLabel")} />
+          <BudgetTracker setBudgetTitle={t("budgetTitle")}/>
         </Box>
       </Container>
       <Select value={language} onChange={handleLanguageChange}>

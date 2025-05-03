@@ -1,7 +1,8 @@
-import * as i18n from 'i18next';
+import * as i18nLang from 'i18next';
 import { initReactI18next } from 'react-i18next';
 
-i18n.use(initReactI18next).init({
+
+i18nLang.use(initReactI18next).init({
   resources: {
     en: {
       translation: {
@@ -23,4 +24,4 @@ i18n.use(initReactI18next).init({
 });
 
 
-export default i18n;
+export default i18nLang;
