@@ -1,0 +1,22 @@
+[
+    {
+      "id": 1,
+      "category": "groceries",
+      "item": "Maize Meal 5kg",
+      "retailer": "Shoprite",
+      "price": 50,
+      "discount": 10,
+      "location": "Johannesburg",
+      "expires": "2025-05-10"
+    },
+    {
+      "id": 2,
+      "category": "school supplies",
+      "item": "Exercise Books (10-pack)",
+      "retailer": "Takealot",
+      "price": 120,
+      "discount": 20,
+      "location": "Cape Town",
+      "expires": "2025-05-15"
+    }
+  ]
